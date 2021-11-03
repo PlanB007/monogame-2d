@@ -9,6 +9,10 @@ namespace ShootingGallery
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
+        Texture2D targetSprite;
+        Texture2D crosshairsSprite;
+        Texture2D backgroundSprite;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -28,6 +32,7 @@ namespace ShootingGallery
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+
         }
 
         protected override void Update(GameTime gameTime)
