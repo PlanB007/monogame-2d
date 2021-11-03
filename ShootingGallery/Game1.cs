@@ -52,6 +52,9 @@ namespace ShootingGallery
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+            _spriteBatch.Draw(targetSprite, new Vector2(0,0), Color.White);
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
