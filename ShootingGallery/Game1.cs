@@ -32,7 +32,9 @@ namespace ShootingGallery
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-
+            targetSprite = Content.Load<Texture2D>("target");
+            crosshairsSprite = Content.Load<Texture2D>("crosshairs");
+            backgroundSprite = Content.Load<Texture2D>("sky");
         }
 
         protected override void Update(GameTime gameTime)
