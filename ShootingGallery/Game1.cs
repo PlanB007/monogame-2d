@@ -67,7 +67,7 @@ namespace ShootingGallery
                 {
                     score++;
                     Random rand = new Random();
-                    targetPosition = new Vector2(rand.Next(50, 350), rand.Next(50, 350));
+                    targetPosition = new Vector2(rand.Next(50, _graphics.PreferredBackBufferWidth - 50), rand.Next(50, _graphics.PreferredBackBufferHeight - 50));
                 }
                 mReleased = false;
             }
@@ -87,7 +87,7 @@ namespace ShootingGallery
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
             _spriteBatch.Draw(backgroundSprite, new Vector2(0, 0), Color.White); //Orders are important it's drawing on top of each other
-            _spriteBatch.DrawString(gameFont, score.ToString(), new Vector2(100, 100), Color.White);
+            _spriteBatch.DrawString(gameFont, score.ToString(), new Vector2(10, 10), Color.White);
             _spriteBatch.Draw(targetSprite, new Vector2(targetPosition.X - targetRadius, targetPosition.Y - targetRadius), Color.White);
             _spriteBatch.End();
 
